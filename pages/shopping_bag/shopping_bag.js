@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/shopping_bag/shopping_bag.js
 Page({
 
   /**

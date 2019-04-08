@@ -1,24 +1,34 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/home",
-    "pages/logs/logs"
+    "pages/classify/classify",
+    "pages/logs/logs",
+    "pages/shopping_bag/shopping_bag",
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "MICHAEL KORS",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "list":[
+  "tabBar": {
+    "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/classify/classify",
         "text": "分类"
+      },
+      {
+        "pagePath": "pages/shopping_bag/shopping_bag",
+        "text": "购物袋"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
       }
     ]
   }

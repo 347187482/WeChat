@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!--<view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -10,4 +10,19 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+</view>-->
+
+<swiper indicator-dots='ture' class='banner'>
+  <swiper-item>
+    <view class='txt'>
+      <text>文字介绍</text>
+    </view>
+    <image mode='aspectFill' src='../../img/mob-img_01.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='../../img/mob-img_02.jpg'></image>
+  </swiper-item>
+  <swiper-item>
+    <image src='../../img/mob-img_03.jpg'></image>
+  </swiper-item>
+</swiper>
