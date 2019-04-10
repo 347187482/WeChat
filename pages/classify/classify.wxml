@@ -11,11 +11,23 @@
   <view class='classify-content'>
     <view class='classify-left'>
       <view class='classify-left-bg'>
-        <view class='classify-list' bindtap='classifyChange'>类型</view>
+        <block wx:for='{{classify}}' wx:for-item='ify' wx:key="ify.id">
+          <view class='classify-list {{num == index ? "avtive" : ""}}' bindtap='classifyChange' data-id='{{index}}'>{{ify.name}}</view>
+        </block>
       </view>
     </view>
     <view class='classify-right'>
-      
+      <image src='{{classify[num].picUrl}}' mode='widthFix'></image>
+      <blcok wx:for='{{classify[num].list}}' wx:key='id'>
+        <view class='classify-list-details'>
+          <view class='classify-list-details-title'>{{item.name}}</view>
+          <view class='classify-list-details-item'>
+            <block wx:for='{{item.list}}' wx:for-item='li'>
+              <view class='classify-item'>{{li}}</view>
+            </block>
+          </view>
+        </view>
+      </blcok>
     </view>
   </view>
 </view>

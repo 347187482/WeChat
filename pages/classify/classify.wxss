@@ -30,3 +30,85 @@
   float: right;
 }
 /*搜索样式end*/
+
+.classify-content{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.classify-content:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.classify-left{
+  position: relative;
+  float: left;
+  width: 25%;
+  background: #f9f9f9;
+  left: -6%;
+}
+
+.classify-list{
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #b3b3b3;
+}
+
+.classify-list.avtive{
+  color: #000;
+}
+
+.classify-right{
+  position: relative;
+  width: 75%;
+  box-sizing: border-box;
+  padding-top: 16px;
+  float: right;
+}
+
+.classify-right image{
+  width: 100%;
+}
+
+.classify-list-details{
+  position: relative;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.classify-list-details-title{
+  position: relative;
+  font-size: 32rpx;
+  padding-bottom: 6px;
+}
+
+.classify-list-details-item{
+  position: relative;
+  font-size: 28rpx;
+  color: #c0c0c0;
+}
+
+.classify-list-details-item:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.classify-list-details-item .classify-item:nth-child(2n+1){
+  margin: 0;
+}
+
+.classify-item{
+  position: relative;
+  width: 48%;
+  float: left;
+  padding: 6px 0;
+  margin: 0 0 6px 4%;
+  border: 1px solid #c0c0c0;
+  box-sizing: border-box;
+}
