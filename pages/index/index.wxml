@@ -1,28 +1,56 @@
-<!--index.wxml-->
-<!--<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class='container'>
+  <!--index.wxml-->
+  <view class='search-index'>
+    <view class='search-txt' bindtap='showSearch'>
+      <text>{{motto}}</text>
+      <icon type='search' size='12' color='#fff'></icon>
+    </view>
+    <block wx:if='{{searchShow}}'>
+      <view class='search-bg'>
+        <view class='search-input'>
+          <label for='search'></label>
+          <input type='text' placeholder='女士系列' id='search'></input>
+          <icon type='search' size='16' color='#000'></icon>
+        </view>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <!--搜索部分 end-->
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' class='banner'>
+    <block wx:for='{{imgUrls}}' wx:key='id'>
+      <swiper-item data-page='{{item.linkUrl}}'>
+        <view class='txt'>
+          <text>{{item.txt}}</text>
+        </view>
+        <image mode='widthFix' src='{{item.url}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--banner end-->
+  <view class='series-content'>
+    <block wx:for='{{series}}' wx:key='id'>
+      <view class='series-item' data-page='{{item.linkUrl}}'>
+        <image mode='widthFix' src='{{item.picUrl}}'></image>
+        <view class='series-name'>{{item.txt}}</view>
+        <view class='series-go'>即刻选购></view>
+      </view>
+    </block>
   </view>
-</view>-->
-
-<swiper indicator-dots='ture' class='banner'>
-  <swiper-item>
-    <view class='txt'>
-      <text>文字介绍</text>
-    </view>
-    <image mode='aspectFill' src='../../img/mob-img_01.jpg'></image>
-  </swiper-item>
-  <swiper-item>
-    <image src='../../img/mob-img_02.jpg'></image>
-  </swiper-item>
-  <swiper-item>
-    <image src='../../img/mob-img_03.jpg'></image>
-  </swiper-item>
-</swiper>
+  <!--系列 end-->
+  <view class='pro-index'>
+    <block wx:for='{{proList}}' wx:key='id' wx:for-item='pro'>
+      <view class='pro-list'>
+        <image mode='widthFix' src='{{pro.picUrl[pro.num]}}'></image>
+        <view class='pro-name'>{{pro.name}}</view>
+        <view class='pro-price'>{{pro.price}}</view>
+        <view class='pro-classify'>
+          <block wx:for='{{pro.classify}}' wx:for-item='seting' wx:key='seting.id'>
+            <view class='pro-classify-list {{pro.num == index ? "active" : ""}}' data-num='{{index}}' bindtap='switchTab' data-id='{{pro.id}}'>
+              <image src='{{seting.picUrl}}'></image>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

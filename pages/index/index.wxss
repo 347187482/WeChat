@@ -20,8 +20,66 @@
   margin-top: 200px;
 }
 
-.banner{
+.search-index{
+  position: relative;
+  color: #fff;
+}
+
+.search-txt{
+  position: relative;
+  display: block;
+  padding: 8rpx 0;
+  background: #000;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.search-txt icon{
+  position: relative;
+  top: 4rpx;
+  padding-left: 32rpx;
+}
+
+.search-index text:after{
+  content: "即可选购>";
+  text-decoration: underline;
+}
+
+.search-bg{
+  position: relative;
+  padding: 12rpx 0;
+}
+
+.search-input{
+  position: relative;
+  width: 90%;
   margin: 0 auto;
+  border-bottom: 2rpx solid #ccc;
+  color:#000;
+}
+
+.search-input:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.search-input input{
+  position: relative;
+  float: left;
+  font-size: 28rpx;
+}
+
+.search-input icon{
+  position: relative;
+  top: 4rpx;
+  float: right;
+}
+/*搜索样式end*/
+.banner{
+  margin: 0 auto 60rpx;
+  min-height: 300px;
 }
 
 .banner image{
@@ -31,10 +89,116 @@
 .txt{
   position: absolute;
   text-align: center;
-  padding: 16px 0;
+  padding: 32rpx 0;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
+  font-size: 28rpx;
+}
+/*banner样式*/
+
+.series-content{
+  position: relative;
+  width: 90%;
+  margin: 0 auto 32rpx;
+  padding-bottom: 12rpx;
+}
+
+.series-item{
+  position: relative;
+  margin-bottom: 32rpx;
+  text-align: center;
+}
+
+.series-item image{
+  width: 100%;
+}
+
+.series-name{
+  position: relative;
+  padding: 40rpx 0 16rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.series-go{
+  position: relative;
+  font-size: 24rpx;
+}
+
+.pro-index{
+  position: relative;
+  width: 90%;
+  margin: 0 auto 60rpx;
+}
+
+.pro-index:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pro-list{
+  position: relative;
+  width: 47%;
+  margin: 0 0 32rpx 6%;
+  float: left;
+}
+
+.pro-index .pro-list:nth-child(2n+1){
+  margin-left: 0;
+}
+
+.pro-list image{
+  width: 100%;
+}
+
+.pro-name{
+  position: relative;
+  font-size: 24rpx;
+  padding: 16rpx 0;
+  height: 80rpx;
+}
+
+.pro-price{
+  position: relative;
+  margin-bottom: 8rpx;
+  font-size: 28rpx;
+}
+
+.pro-classify{
+  position: relative;
+}
+
+.pro-classify:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pro-classify-list{
+  position: relative;
+  float: left;
+  width: 24px;
+  height: 24px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 3px;
+}
+
+.pro-classify-list image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 18px;
+  width: 18px;
+  border-radius: 50%; 
+}
+
+.pro-classify-list.active{
+  border: 1px solid #000;
 }

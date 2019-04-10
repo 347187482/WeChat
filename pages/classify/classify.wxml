@@ -1,15 +1,21 @@
 <!--pages/home/home.wxml-->
-<swiper indicator-dots='ture' class='banner'>
-  <swiper-item>
-    <view class='txt'>
-      <text>文字介绍</text>
+<view class='container'>
+  <view class='search-bg'>
+    <view class='search-input'>
+      <label for='search'></label>
+      <input type='text' placeholder='女士系列' id='search'></input>
+      <icon type='search' size='16' color='#000'></icon>
     </view>
-    <image mode='aspectFill' src='../../img/mob-img_01.jpg'></image>
-  </swiper-item>
-  <swiper-item>
-    <image src='../../img/mob-img_02.jpg'></image>
-  </swiper-item>
-  <swiper-item>
-    <image src='../../img/mob-img_03.jpg'></image>
-  </swiper-item>
-</swiper>
+  </view>
+  <!--搜索end-->
+  <view class='classify-content'>
+    <view class='classify-left'>
+      <view class='classify-left-bg'>
+        <view class='classify-list' bindtap='classifyChange'>类型</view>
+      </view>
+    </view>
+    <view class='classify-right'>
+      
+    </view>
+  </view>
+</view>
