@@ -1,16 +1,19 @@
 {
   "pages": [
+    "pages/shopping_bag/shopping_bag",
+    "pages/list/list",
     "pages/classify/classify",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/shopping_bag/shopping_bag",
-    "pages/my/my"
+    "pages/my/my",
+    "template/search"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "MICHAEL KORS",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#3c3c3c",

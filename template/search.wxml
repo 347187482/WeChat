@@ -1,0 +1,20 @@
+<!--template/search.wxml-->
+<text>template/search.wxml</text>
+
+<template name='search'>
+  <view class='search-index'>
+    <view class='search-txt' bindtap='showSearch'>
+      <text>{{motto}}</text>
+      <icon type='search' size='12' color='#fff'></icon>
+    </view>
+    <block wx:if='{{searchShow}}'>
+      <view class='search-bg'>
+        <view class='search-input'>
+          <label for='search'></label>
+          <input type='text' placeholder='女士系列' id='search'></input>
+          <icon type='search' size='16' color='#000'></icon>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>

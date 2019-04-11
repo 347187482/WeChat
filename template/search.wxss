@@ -1,0 +1,58 @@
+/* template/search.wxss */
+.search-index{
+  position: relative;
+  color: #fff;
+}
+
+.search-txt{
+  position: relative;
+  display: block;
+  padding: 12rpx 0;
+  background: #000;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.search-txt icon{
+  position: relative;
+  top: 4rpx;
+  padding-left: 32rpx;
+}
+
+.search-index text:after{
+  content: "即可选购>";
+  text-decoration: underline;
+}
+
+.search-bg{
+  position: relative;
+  padding: 12rpx 0;
+}
+
+.search-input{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #ccc;
+  color:#000;
+}
+
+.search-input:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.search-input input{
+  position: relative;
+  float: left;
+  font-size: 28rpx;
+}
+
+.search-input icon{
+  position: relative;
+  top: 4rpx;
+  float: right;
+}
+/*搜索样式end*/

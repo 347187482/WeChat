@@ -22,7 +22,7 @@
         <view class='classify-list-details'>
           <view class='classify-list-details-title'>{{item.name}}</view>
           <view class='classify-list-details-item'>
-            <block wx:for='{{item.list}}' wx:for-item='li'>
+            <block wx:for='{{item.list}}' wx:for-item='li' wx:key='li.name'>
               <view class='classify-item'>{{li}}</view>
             </block>
           </view>
