@@ -1,2 +1,11 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='container'>
+  <view class='my-content'>
+    <block wx:for='{{myList}}' wx:key=''>
+      <view class='my-item'>
+        <image src='{{item.imgUrl}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>

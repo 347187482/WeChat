@@ -1,1 +1,30 @@
 /* pages/my/my.wxss */
+.my-content{
+  position: relative;
+  text-align: center;
+}
+
+.my-item{
+  position: relative;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+  border-top: 2rpx solid #ccc;
+  border-left: 2rpx solid #ccc;
+  font-size: 28rpx;
+}
+
+.my-item image{
+  position: relative;
+  width: 84rpx;
+  height: 84rpx;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20rpx;
+}
+
+.my-content .my-item:nth-child(2n+1){
+  border-left: none;
+}

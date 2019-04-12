@@ -1,18 +1,19 @@
 /* pages/shopping_bag/shopping_bag.wxss */
-.shop-bag-content{
+
+.shop-bag-content {
   position: relative;
   background: #f6f6f6;
   padding-top: 1px;
 }
 
-.shop-bag-bag{
+.shop-bag-bag {
   position: relative;
   padding: 0 5%;
   margin-top: 20rpx;
   background: #fff;
 }
 
-.shop-bag-txt{
+.shop-bag-txt {
   position: relative;
   padding: 60px 0;
   font-size: 28rpx;
@@ -20,78 +21,87 @@
 }
 
 /*购物车列表项*/
-.shop-bag-list{
+
+.shop-bag-list {
   position: relative;
   margin-bottom: 30px;
 }
 
-.shop-bag-list-item{
+.shop-bag-list-item {
   position: relative;
-  padding-top: 24rpx;
-  overflow: hidden;
+  padding: 24rpx 0;
+  border-bottom: 2rpx solid #f3f3f3;
 }
 
-.shop-bag-list-item-chackbox{
+.shop-bag-list-item::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.shop-bag-list-item-chackbox {
   position: relative;
   float: left;
-  width: 10%;
+  width: 8%;
 }
 
-.shop-bag-list-item-img{
+.shop-bag-list-item-img {
   position: relative;
   float: left;
   width: 25%;
-  margin: 0 5% 0 2%; 
+  margin: 0 2% 0 2%;
 }
 
-.shop-bag-list-item-img image{
+.shop-bag-list-item-img image {
   position: relative;
   display: block;
   width: 100%;
 }
 
-.shop-bag-list-item-txt{
+.shop-bag-list-item-txt {
   position: relative;
   font-size: 24rpx;
   float: left;
-  width: 58%;
+  width: 63%;
 }
 
-.shop-bag-list-item-txt view{
+.shop-bag-list-item-txt view {
   position: relative;
 }
 
-.shop-bag-list-item-txt .shop-bag-list-item-txt-name{
+.shop-bag-list-item-txt .shop-bag-list-item-txt-name {
   padding: 12rpx 0 8rpx;
 }
 
-.shop-bag-list-item-txt .shop-bag-list-item-txt-size,.shop-bag-list-item-txt .shop-bag-list-item-txt-color{
+.shop-bag-list-item-txt .shop-bag-list-item-txt-size,
+.shop-bag-list-item-txt .shop-bag-list-item-txt-color {
   padding: 8rpx 0;
 }
 
-.shop-bag-list-item-price{
+.shop-bag-list-item-price {
   position: relative;
   margin-top: 20px;
 }
 
-.shop-bag-list-item-price:after{
+.shop-bag-list-item-price:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.shop-bag-list-item-num{
+.shop-bag-list-item-num {
   position: relative;
   float: left;
   width: 58%;
 }
 
-.shop-bag-list-item-num:after{
+.shop-bag-list-item-num:after {
   content: "";
   display: block;
   clear: both;
 }
-.shop-bag-list-item-num view{
+
+.shop-bag-list-item-num view {
   position: relative;
   float: left;
   border: none;
@@ -99,35 +109,37 @@
   width: calc(100%/3);
   box-sizing: border-box;
   text-align: center;
-  height: 26px;
-  line-height: 24px;
+  height: 52rpxpx;
+  min-height: 52rpx;
+  line-height: 48rpx;
 }
 
-.shop-bag-list-item-num view{
+.shop-bag-list-item-num view {
   border: 2rpx solid #f3f3f3;
 }
 
-
-.shop-bag-list-item-price-txt{
+.shop-bag-list-item-price-txt {
   position: relative;
   float: right;
-  line-height: 26px;
+  line-height: 52rpx;
   font-weight: bold;
+  padding-right: 12rpx;
+  box-sizing: border-box;
 }
 
-.shop-bag-list-item-num-input input{
-  height: 26px;
-  min-height: 26px;
+.shop-bag-list-item-num-input input {
+  height: 48rpx;
+  min-height: 48rpx;
 }
 
-.shop-bag-list-item-change{
+.shop-bag-list-item-change {
   position: relative;
   padding: 20px 0;
   border-bottom: 2rpx solid #f5f5f5;
   overflow: hidden;
 }
 
-.shop-bag-list-item-change-txt{
+.shop-bag-list-item-change-txt {
   position: relative;
   float: right;
   width: 58%;
@@ -136,40 +148,130 @@
   overflow: hidden;
 }
 
-.shop-bag-list-item-change-txt-del{
+.shop-bag-list-item-change-txt-del {
   position: relative;
   float: left;
 }
 
-.shop-bag-list-item-change-txt-amend{
+.shop-bag-list-item-change-txt-amend {
   position: relative;
   float: right;
 }
 
+.shop-bag-list-item-remove{
+  width: 160rpx;  
+  height: 100%;  
+  background-color: red; 
+  color: white; 
+  position: absolute;  
+  top: 0;  
+  right: -162rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}
+
 /*购物车结算*/
-.shop-bag-account{
+
+.shop-bag-account {
   position: relative;
   font-size: 24rpx;
 }
 
-.shop-bag-account-txt{
+.shop-bag-account-txt {
   position: relative;
   padding: 10rpx 0;
 }
 
-.shop-bag-account-txt:after{
+.shop-bag-account-txt:after {
   content: "";
   display: block;
   clear: both;
 }
 
-.shop-bag-account-txt-left{
+.shop-bag-account-txt-left {
   position: relative;
   float: left;
 }
 
-.shop-bag-account-txt-right{
+.shop-bag-account-txt-right {
   position: relative;
   float: right;
   text-align: right;
+}
+
+/*购物车结算部分*/
+
+.account-price {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.account-price:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.account-price-content {
+  position: relative;
+  width: 95%;
+  float: right;
+  height: 45px;
+  line-height: 45px;
+}
+
+.account-price-chackbox, .account-price-aggregate, .account-price-btn {
+  position: relative;
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 100%;
+}
+
+.account-price-chackbox checkbox{
+  position: relative;
+  top: -1px;
+}
+
+.account-price-chackbox label {
+  font-size: 28rpx;
+  position: relative;
+  top: -1px;
+}
+
+checkbox .wx-checkbox-input {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.account-price-aggregate {
+  width: 50%;
+  font-size: 28rpx;
+}
+
+.account-price-btn {
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: rgb(85, 124, 231);
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
 }

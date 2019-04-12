@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/shopping_bag/shopping_bag",
     "pages/list/list",
     "pages/classify/classify",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/my/my",
     "template/search"
   ],
   "window": {
@@ -33,7 +33,7 @@
       },
       {
         "pagePath": "pages/shopping_bag/shopping_bag",
-        "text": "购物袋",
+        "text": "购物车",
         "iconPath": "img/icon/shopping.png",
         "selectedIconPath": "img/icon/shopping_2.png"
       },

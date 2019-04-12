@@ -5,65 +5,78 @@
       <view wx:if="{{shopList.length <= 0}}" class='shop-bag-txt'>您的购物袋内无商品。</view>
       <view wx:else class='shop-bag-list'>
         <checkbox-group bindchange="checkboxChange">
-          <block wx:for="{{shopList}}" wx:key="item.id">
-            <view class='shop-bag-list-item'>
-              <view class='shop-bag-list-item-chackbox'>
-                <label>
-                  <checkbox data-index='{{index}}'></checkbox>
-                </label>
-              </view>
-              <view class='shop-bag-list-item-img'>
-                <image mode='widthFix' src='{{item.imgUrl}}'></image>
-              </view>
-              <view class='shop-bag-list-item-txt'>
-                <view class='shop-bag-list-item-txt-name'>{{item.name}}</view>
-                <view class='shop-bag-list-item-txt-size'>尺码：{{item.size.sizeNow}}</view>
-                <view class='shop-bag-list-item-txt-color'>颜色：{{item.color.colorNow}}</view>
-                <view class='shop-bag-list-item-price'>
-                  <view class='shop-bag-list-item-num'>
-                    <view class='shop-bag-list-item-num-subtract'>-</view>
-                    <view class='shop-bag-list-item-num-input'>
-                      <input type='text' value='{{item.num}}' />
+          <scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
+            <block wx:for="{{shopList}}" wx:key="item.id">
+              <view data-index='{{index}}' class='shop-bag-list-item' bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+                <view class='shop-bag-list-item-chackbox'>
+                  <label>
+                    <checkbox data-index='{{index}}' value='{{item.id}}'></checkbox>
+                  </label>
+                </view>
+                <view class='shop-bag-list-item-img'>
+                  <image mode='widthFix' src='{{item.imgUrl}}'></image>
+                </view>
+                <view class='shop-bag-list-item-txt'>
+                  <view class='shop-bag-list-item-txt-name'>{{item.name}}</view>
+                  <view class='shop-bag-list-item-txt-size'>尺码：{{item.size.sizeNow}}</view>
+                  <view class='shop-bag-list-item-txt-color'>颜色：{{item.color.colorNow}}</view>
+                  <view class='shop-bag-list-item-price'>
+                    <view class='shop-bag-list-item-num'>
+                      <view class='shop-bag-list-item-num-subtract'>-</view>
+                      <view class='shop-bag-list-item-num-input'>
+                        <input type='text' value='{{item.num}}' />
+                      </view>
+                      <view class='shop-bag-list-item-num-add'>+</view>
                     </view>
-                    <view class='shop-bag-list-item-num-add'>+</view>
-                  </view>
-                  <view class='shop-bag-list-item-price-txt'>
-                    ￥{{item.price}}
+                    <view class='shop-bag-list-item-price-txt'>￥{{item.price}}</view>
                   </view>
                 </view>
+                <view class="shop-bag-list-item-remove" bindtap="delItem">删除 </view>
               </view>
-            </view>
-            <view class='shop-bag-list-item-change'>
-              <view class='shop-bag-list-item-change-span'></view>
-              <view class='shop-bag-list-item-change-txt'>
-                <view class='shop-bag-list-item-change-txt-del'>移除</view>
-                <view class='shop-bag-list-item-change-txt-amend'>编辑</view>
-              </view>
-            </view>
-          </block>
+              <!--<view class='shop-bag-list-item-change'>
+                <view class='shop-bag-list-item-change-span'></view>
+                <view class='shop-bag-list-item-change-txt'>
+                  <view class='shop-bag-list-item-change-txt-del'>移除</view>
+                  <view class='shop-bag-list-item-change-txt-amend'>编辑</view>
+                </view>
+              </view>-->
+            </block>
+          </scroll-view>
         </checkbox-group>
       </view>
       <view class='shop-bag-account'>
         <view class='shop-bag-account-txt'>
           <view class='shop-bag-account-txt-left'>商品金额：</view>
-          <view class='shop-bag-account-txt-right'>￥1230.00</view>
+          <view class='shop-bag-account-txt-right'>￥{{priceAll}}.00</view>
         </view>
         <view class='shop-bag-account-txt'>
           <view class='shop-bag-account-txt-left'>优惠金额：</view>
-          <view class='shop-bag-account-txt-right'>￥10.00</view>
+          <view class='shop-bag-account-txt-right'>￥{{sale}}.00</view>
         </view>
         <view class='shop-bag-account-txt'>
           <view class='shop-bag-account-txt-left'>运费：</view>
-          <view class='shop-bag-account-txt-right'>￥10.00</view>
+          <view class='shop-bag-account-txt-right'>￥{{freight}}.00</view>
         </view>
         <view class='shop-bag-account-txt'>
           <view class='shop-bag-account-txt-left'>包装：</view>
-          <view class='shop-bag-account-txt-right'>￥10.00</view>
+          <view class='shop-bag-account-txt-right'>￥{{pack}}.00</view>
         </view>
       </view>
     </view>
   </view>
 </view>
 <view class='account-price'>
-  <view class=''></view>
+  <view class='account-price-content'>
+    <view class='account-price-chackbox'>
+      <label>
+        <checkbox></checkbox>全选
+      </label>
+    </view>
+    <view class='account-price-aggregate'>
+      总计：￥{{priceAll - sale + freight + pack}}.00
+    </view>
+    <view class='account-price-btn'>
+      结算
+    </view>
+  </view>
 </view>
