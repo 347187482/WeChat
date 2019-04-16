@@ -20,10 +20,10 @@
       <image src='{{classify[num].picUrl}}' mode='widthFix'></image>
       <blcok wx:for='{{classify[num].list}}' wx:key='id'>
         <view class='classify-list-details'>
-          <view class='classify-list-details-title'>{{item.name}}</view>
+          <view class='classify-list-details-title' bindtap='classifyList' data-category='{{item.category}}'>{{item.name}}</view>
           <view class='classify-list-details-item'>
             <block wx:for='{{item.list}}' wx:for-item='li' wx:key='li.name'>
-              <view class='classify-item'>{{li}}</view>
+              <view class='classify-item' bindtap='classifyList' data-category='{{li.category}}'>{{li.nameList}}</view>
             </block>
           </view>
         </view>

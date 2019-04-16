@@ -8,4 +8,11 @@
       </view>
     </block>
   </view>
+  <view class='my-issue-box'>
+    <view class='my-issue'>
+      <view class='my-FAQ'>FAQ</view>
+      <view class='my-sales'>退换货政策</view>
+      <view class='my-VIP'>会员权益</view>
+    </view>
+  </view>
 </view>

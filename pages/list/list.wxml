@@ -17,7 +17,7 @@
     <view class='pro-index'>
       <block wx:for='{{proList}}' wx:key='id' wx:for-item='pro'>
         <view class='pro-list'>
-          <image mode='widthFix' src='{{pro.picUrl[pro.num]}}'></image>
+          <image mode='widthFix' src='{{pro.picUrl[pro.num]}}' data-id='{{pro.id}}' bindtap='toDetails'></image>
           <view class='pro-name'>{{pro.name}}</view>
           <view class='pro-price'>{{pro.price}}</view>
           <view class='pro-classify'>

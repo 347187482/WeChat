@@ -1,0 +1,45 @@
+<!--pages/details/details.wxml-->
+<import src="../../template/search.wxml" />
+
+<view class='container'>
+  <template is='search' data='{{...item}}'></template>
+  <view class='details-content'>
+    <view class='details-banner'>
+      <swiper class='details-swiper' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration="{{duration}}">
+        <block wx:for='{{detailsList.picUrl[detailsList.num].imgUrl}}' wx:key='' wx:for-item='img'>
+          <swiper-item>
+            <image mode='widthFix' src='{{img}}'></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='details-banner-scale' bindtap='scale'>放大</view>
+    </view>
+    <!--详情页滚动条-->
+    <view class='details-txt'>
+      <view class='details-logo'>MICHAEL KORS</view>
+      <view class='details-name font-bold'>名字</view>
+      <view class='details-id'>款式</view>
+      <view class='details-price font-bold'>价格</view>
+      <view class='details-color font-bold'>
+        <text>颜色：</text>
+        <view class='details-color-list'>
+          <block wx:for='{{detailsList.classify}}' wx:key=''>
+            <view class='pro-classify-list {{detailsList.num == index ? "active" : ""}}' data-num="{{index}}" bindtap='switchTab'>
+              <image src='{{item.picUrl}}'></image>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='details-size font-bold'>
+        <text>尺码：</text>
+      </view>
+      <view class='details-promise'>MICHAEL KORS 中国官方在线精品店为您提供100%正品保证</view>
+    </view>
+  </view>
+</view>
+
+<view class='details-modal'>
+  <swiper>
+    <swiper-item></swiper-item>
+  </swiper>
+</view>

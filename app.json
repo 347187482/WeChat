@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/details/details",
+    "pages/classify/classify",
+    "pages/list/list",
     "pages/my/my",
     "pages/shopping_bag/shopping_bag",
-    "pages/list/list",
-    "pages/classify/classify",
     "pages/index/index",
     "pages/logs/logs",
     "template/search"

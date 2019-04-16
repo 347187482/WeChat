@@ -1,0 +1,80 @@
+/* pages/details/details.wxss */
+@import "../../template/search.wxss";
+@import "../index/index.wxss";
+
+.details-content{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.details-banner{
+  position: relative;
+  padding: 20rpx 0;
+  min-height: 300px;
+}
+
+.details-banner .details-swiper{
+  position: relative;
+  height: 300px;
+}
+
+.details-banner image{
+  position: relative;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.details-banner-scale{
+  position: absolute;
+  bottom: 40rpx;
+  right: 20rpx;
+  font-size: 28rpx;
+}
+
+.font-bold{
+  font-weight: bold;
+}
+
+.details-txt{
+  position: relative;
+  font-size: 24rpx;
+}
+
+.details-name{
+  position: relative;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+}
+
+.details-price{
+  position: relative;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+}
+
+.details-size{
+  position: relative;
+  padding: 16rpx 0;
+}
+
+.details-color{
+  position: relative;
+}
+
+.details-color text{
+  position: relative;
+  display: block;
+  padding-bottom: 6rpx;
+}
+
+.details-color-list{
+  position: relative;
+}
+
+.details-color-list:after{
+  content: "";
+  display: block;
+  clear: both;
+}

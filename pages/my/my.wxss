@@ -1,7 +1,19 @@
 /* pages/my/my.wxss */
+.container{
+  height: 100%;
+  background: #f6f6f6;
+}
+
 .my-content{
   position: relative;
   text-align: center;
+  background: #fff;
+}
+
+.my-content:after{
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .my-item{
@@ -10,8 +22,8 @@
   float: left;
   box-sizing: border-box;
   padding: 40rpx 0;
-  border-top: 2rpx solid #ccc;
-  border-left: 2rpx solid #ccc;
+  border-top: 2rpx solid #fafafa;
+  border-left: 2rpx solid #fafafa;
   font-size: 28rpx;
 }
 
@@ -27,4 +39,38 @@
 
 .my-content .my-item:nth-child(2n+1){
   border-left: none;
+}
+
+.my-issue-box{
+  position: relative;
+  background: #fff;
+  margin-top: 24rpx;
+}
+
+.my-issue{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40rpx;
+  font-size: 24rpx;
+}
+
+.my-issue::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.my-issue view{
+  position: relative;
+  float: left;
+  width: calc(100%/3);
+}
+
+.my-sales{
+  text-align: center;
+}
+
+.my-VIP{
+  text-align: right;
 }
