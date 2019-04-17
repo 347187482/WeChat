@@ -43,4 +43,7 @@
     </view>
   </view>
   <!--支付按钮-->
+  <view class='pay-btn'>
+    支付金额￥11，000
+  </view>
 </view>
