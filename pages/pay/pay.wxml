@@ -16,9 +16,31 @@
   <view class='pay-way-content'>
     <view class='pay-way'>
       <text>支付方式</text>
+      <view class='pay-way-list'>
+        <radio-group>
+          <label for='WeChat'>
+            <radio id='WeChat'>微信支付</radio>
+          </label>
+          <label for='pay'>
+            <radio id='pay'>他人代付</radio>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <view class='pay-invoice-content'>
+    <view class='pay-invoice'>
+      <view class='pay-invoice-txt'>发票</view>
+      <view class='pay-invoice-switch'>
+        <switch></switch>
+      </view>
     </view>
   </view>
   <!--商品信息-->
-  <view class='pay-pro-content'></view>
+  <view class='pay-pro-content'>
+    <view class='pay-pro'>
+      <view class='pay-pro-txt'>商品详情</view>
+    </view>
+  </view>
   <!--支付按钮-->
 </view>

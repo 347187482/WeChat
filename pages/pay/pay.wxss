@@ -1,54 +1,130 @@
 /* pages/pay/pay.wxss */
-.container{
+
+.container {
   position: relative;
   background: #f6f6f6;
   padding-top: 20rpx;
 }
 
-.pay-address-content,.pay-pro-content,.pay-way-content{
+.pay-address-content, .pay-pro-content, .pay-way-content, .pay-invoice-content {
   position: relative;
   padding: 60rpx 0;
   background: #fff;
   margin-bottom: 20rpx;
 }
 
-.pay-address{
+.pay-address {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-.pay-address-titel{
+.pay-address-titel {
   position: relative;
   margin-bottom: 30rpx;
   font-size: 28rpx;
 }
 
-.pay-address-titel::after{
+.pay-address-titel::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.pay-address-titel text{
+.pay-address-titel text {
   position: relative;
   float: left;
   display: block;
+  font-weight: bold;
 }
 
-.pay-address-titel view{
+.pay-address-titel view {
   position: relative;
   float: right;
 }
 
-.pay-address-add{
+.pay-address-add {
   position: relative;
 }
 
-.pay-address-add-btn{
+.pay-address-add-btn {
   position: relative;
   border: 2rpx solid #000;
   text-align: center;
   padding: 16rpx 0;
   font-size: 28rpx;
+}
+
+.pay-way {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 28rpx;
+}
+
+.pay-way text {
+  position: relative;
+  display: block;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+
+.pay-way-list {
+  position: relative;
+}
+
+.pay-way-list label {
+  position: relative;
+  display: block;
+  margin-bottom: 28rpx;
+}
+
+radio .wx-radio-input {
+  border-radius: 3rpx;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: -4rpx;
+  border-radius: 50%;
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%;
+}
+
+.pay-invoice {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pay-invoice:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pay-invoice-txt {
+  position: relative;
+  float: left;
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 64rpx;
+}
+
+.pay-invoice-switch {
+  position: relative;
+  float: right;
+}
+
+.pay-pro{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pay-pro-txt{
+  position: relative;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
 }
