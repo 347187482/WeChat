@@ -1,0 +1,24 @@
+<!--pages/pay/pay.wxml-->
+<view class='container'>
+  <!--地址模块-->
+  <view class='pay-address-content'>
+    <view class='pay-address'>
+      <view class='pay-address-titel'>
+        <text>配送地址</text>
+        <view>授权地址信息</view>
+      </view>
+      <view class='pay-address-add'>
+        <view class='pay-address-add-btn'>+添加新地址</view>
+      </view>
+    </view>
+  </view>
+  <!--支付方式-->
+  <view class='pay-way-content'>
+    <view class='pay-way'>
+      <text>支付方式</text>
+    </view>
+  </view>
+  <!--商品信息-->
+  <view class='pay-pro-content'></view>
+  <!--支付按钮-->
+</view>

@@ -17,9 +17,9 @@
     <!--详情页滚动条-->
     <view class='details-txt'>
       <view class='details-logo'>MICHAEL KORS</view>
-      <view class='details-name font-bold'>名字</view>
-      <view class='details-id'>款式</view>
-      <view class='details-price font-bold'>价格</view>
+      <view class='details-name font-bold'>{{detailsList.picUrl[detailsList.num].name}}</view>
+      <view class='details-id'>{{detailsList.idCdode}}</view>
+      <view class='details-price font-bold'>{{detailsList.price}}</view>
       <view class='details-color font-bold'>
         <text>颜色：</text>
         <view class='details-color-list'>
@@ -32,14 +32,65 @@
       </view>
       <view class='details-size font-bold'>
         <text>尺码：</text>
+        <view class='details-size-list'>
+          <block wx:for='{{detailsList.size[detailsList.num].sizeList}}' wx:key='' wx:for-item='size'>
+            <view class='size-list {{detailsList.sizeNum == index ? "active" : ""}}' data-active='{{index}}' bindtap='sizeChoose'>{{size}}</view>
+          </block>
+        </view>
       </view>
       <view class='details-promise'>MICHAEL KORS 中国官方在线精品店为您提供100%正品保证</view>
+    </view>
+    <!--详情页文字描述-->
+    <view class='details-txt-content' id='detail' >
+      <view class='details-txt-title {{position}}'>
+        <view class='details-txt-title-left'>商品详情</view>
+        <view class='details-txt-title-right'>细节图片</view>
+      </view>
+      <view class='pro-style'>
+        <view class='pro-style-title font-bold'>商品风格</view>
+        <view class='pro-style-txt'>{{detailsList.proStyle}}</view>
+      </view>
+      <view class='pro-detail'>
+        <view class='pro-detail-title font-bold'>商品细节</view>
+        <view class='pro-detail-txt'>{{detailsList.proDetail}}</view>
+      </view> 
+      <view class='pro-upkeep'>
+        <view class='pro-upkeep-title font-bold'>商品保养</view>
+        <view class='pro-upkeep-txt'>{{detailsList.proUpkeep}}</view>
+      </view>
+      <view class='pro-img'>
+        <block wx:for='{{detailsList.picUrl[detailsList.num].imgUrl}}' wx:key='' wx:for-item='proImg'>
+          <image mode='widthFix' src='{{proImg}}'></image>
+        </block>
+      </view>
     </view>
   </view>
 </view>
 
-<view class='details-modal'>
-  <swiper>
-    <swiper-item></swiper-item>
-  </swiper>
+<block wx:if='{{show}}'>
+  <view class='details-modal'>
+    <swiper class='details-modal-scale' indicator-dots='{{indicatorDots}}'>
+      <block wx:for='{{detailsList.picUrl[detailsList.num].imgUrl}}' wx:key=''>
+        <swiper-item>
+          <image image mode='widthFix' src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='details-modal-scale-close' bindtap='scaleClose'>×</view>
+  </view>
+</block>
+
+<view class='details-account'>
+  <view class='details-account-left'>
+    <view class='details-account-list' bindtap='toIndex'>
+      <text>首页</text>
+    </view>
+    <view class='details-account-list' bindtap='toBag'>
+      <text>购物车</text>
+    </view>
+  </view>
+  <view class='details-account-right'>
+    <view class='details-account-add'>加入购物车</view>
+    <view class='details-account-buy'>即刻购买</view>
+  </view>
 </view>

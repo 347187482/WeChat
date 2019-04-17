@@ -1,0 +1,54 @@
+/* pages/pay/pay.wxss */
+.container{
+  position: relative;
+  background: #f6f6f6;
+  padding-top: 20rpx;
+}
+
+.pay-address-content,.pay-pro-content,.pay-way-content{
+  position: relative;
+  padding: 60rpx 0;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.pay-address{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pay-address-titel{
+  position: relative;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+}
+
+.pay-address-titel::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pay-address-titel text{
+  position: relative;
+  float: left;
+  display: block;
+}
+
+.pay-address-titel view{
+  position: relative;
+  float: right;
+}
+
+.pay-address-add{
+  position: relative;
+}
+
+.pay-address-add-btn{
+  position: relative;
+  border: 2rpx solid #000;
+  text-align: center;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+}

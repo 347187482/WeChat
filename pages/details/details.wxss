@@ -2,79 +2,262 @@
 @import "../../template/search.wxss";
 @import "../index/index.wxss";
 
-.details-content{
+.details-content {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-.details-banner{
+.details-banner {
   position: relative;
   padding: 20rpx 0;
   min-height: 300px;
 }
 
-.details-banner .details-swiper{
+.details-banner .details-swiper {
   position: relative;
   height: 300px;
 }
 
-.details-banner image{
+.details-banner image {
   position: relative;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.details-banner-scale{
+.details-banner-scale {
   position: absolute;
   bottom: 40rpx;
   right: 20rpx;
   font-size: 28rpx;
 }
 
-.font-bold{
+.font-bold {
   font-weight: bold;
 }
 
-.details-txt{
+.details-txt {
   position: relative;
   font-size: 24rpx;
 }
 
-.details-name{
+.details-name {
   position: relative;
   font-size: 32rpx;
   padding: 20rpx 0;
 }
 
-.details-price{
+.details-price {
   position: relative;
-  padding: 16rpx 0;
+  padding: 20rpx 0;
   font-size: 28rpx;
 }
 
-.details-size{
+.details-size {
   position: relative;
   padding: 16rpx 0;
 }
 
-.details-color{
-  position: relative;
-}
-
-.details-color text{
+.details-size {
   position: relative;
   display: block;
-  padding-bottom: 6rpx;
+  padding-bottom: 10rpx;
 }
 
-.details-color-list{
+.details-size-list {
   position: relative;
+  padding-top: 8rpx;
 }
 
-.details-color-list:after{
+.details-size-list:after {
   content: "";
   display: block;
   clear: both;
 }
+
+.size-list {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 6rpx;
+  float: left;
+  box-sizing: border-box;
+  color: #000;
+  text-align: center;
+  line-height: 38px;
+  border: 2rpx solid #000;
+}
+
+.size-list.active {
+  background: #000;
+  color: #fff;
+}
+
+.details-color {
+  position: relative;
+}
+
+.details-color text {
+  position: relative;
+  display: block;
+  padding-bottom: 10rpx;
+}
+
+.details-color-list {
+  position: relative;
+}
+
+.details-color-list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*产品放大图stat*/
+
+.details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.details-modal-scale {
+  position: relative;
+  width: 96%;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 400px;
+}
+
+.details-modal-scale image {
+  position: relative;
+  width: 100%;
+}
+
+.details-modal-scale-close {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  color: #fff;
+  font-size: 48rpx;
+}
+
+/*产品放大图end*/
+
+/*详情文字描述开始*/
+
+.details-txt-content {
+  position: relative;
+}
+
+.details-txt-title {
+  position: relative;
+  padding: 40rpx 0 20rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.details-txt-title.position {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+.details-txt-title::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.details-txt-title-left, .details-txt-title-right {
+  position: relative;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.pro-style, .pro-detail, .pro-upkeep, .pro-img {
+  position: relative;
+  padding-top: 40rpx;
+  font-size: 28rpx;
+}
+
+.pro-upkeep {
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.pro-style-txt, .pro-detail-txt, .pro-upkeep-txt {
+  position: relative;
+  padding-top: 40rpx;
+  text-align: justify;
+}
+
+.pro-upkeep-txt {
+  padding-bottom: 10rpx;
+}
+
+.pro-img image {
+  width: 100%;
+}
+
+/*底部导航stat*/
+
+.details-account {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-top: 2rpx solid #ebebeb;
+}
+
+.details-account-left {
+  position: relative;
+  float: left;
+  width: 40%;
+}
+
+.details-account-list {
+  position: relative;
+  float: left;
+  width: 50%;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60px;
+}
+
+.details-account-right {
+  position: relative;
+  width: 60%;
+  float: left;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 60px;
+}
+
+.details-account-add {
+  position: relative;
+  float: left;
+  width: 55%;
+  background: #000;
+  color: #fff;
+}
+
+.details-account-buy {
+  position: relative;
+  float: left;
+  width: 45%;
+  background: #baa36f;
+  color: #fff;
+}
+
+/*底部导航end*/
