@@ -138,3 +138,73 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   background: #000;
   color: #fff;
 }
+
+.pay-pro-list{
+  position: relative;
+  font-size: 28rpx;
+}
+
+.pay-pro-item{
+  position: relative;
+  padding-bottom: 60rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.pay-pro-item::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pay-pro-item-left{
+  position: relative;
+  float: left;
+  width: 25%;
+  margin-right: 5%;
+}
+
+.pay-pro-item-left image{
+  position: relative;
+  width: 100%;
+}
+
+.pay-pro-item-right{
+  position: relative;
+  float: left;
+  width: 70%;
+}
+
+.pay-pro-item-name,.pay-pro-item-size,.pay-pro-item-color{
+  position: relative;
+  padding-bottom: 8rpx;
+}
+
+.pay-pro-item-color{
+  margin-top: 40rpx;
+}
+
+.pay-pro-item-txt{
+  position: relative;
+}
+
+.pay-pro-item-txt::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pay-pro-item-num{
+  position: relative;
+  float: left;
+}
+
+.pay-pro-item-price{
+  position: relative;
+  float: right;
+}
+
+.pay-address-txt{
+  position: relative;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+}

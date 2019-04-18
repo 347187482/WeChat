@@ -88,6 +88,11 @@ Page({
       "detailsList.sizeNum": newSize
     })
   },
+  addCar: function(e){
+    wx.showToast({
+      title: '添加成功',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -126,6 +131,11 @@ Page({
   toBag:function(e){
     wx.switchTab({
       url: '../shopping_bag/shopping_bag',
+    })
+  },
+  toPay:function(e){
+    wx.navigateTo({
+      url: '../pay/pay',
     })
   },
   /**

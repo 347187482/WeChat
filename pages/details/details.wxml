@@ -90,7 +90,7 @@
     </view>
   </view>
   <view class='details-account-right'>
-    <view class='details-account-add'>加入购物车</view>
-    <view class='details-account-buy'>即刻购买</view>
+    <view class='details-account-add' bindtap='addCar'>加入购物车</view>
+    <view class='details-account-buy' bindtap='toPay'>即刻购买</view>
   </view>
 </view>

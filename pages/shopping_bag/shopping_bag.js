@@ -47,11 +47,11 @@ Page({
       imgUrl: "../../img/shop_bag/shop_bag02.jpg"
     }],
     priceAll: 0,
-    sale: 10,
-    freight: 10,
-    pack: 10
+    sale: 0,
+    freight: 0,
+    pack: 0
   },
-
+  //选择购物车商品后计算总价
   checkboxChange: function(e) {
     var that = this;
     var priceAll = 0;
@@ -63,6 +63,7 @@ Page({
       priceAll: priceAll
     })
   },
+  //删除按钮 滑动开始位置
   drawStart: function(e) {
     // console.log("drawStart");  
     var touch = e.touches[0];
@@ -77,6 +78,7 @@ Page({
     })
 
   },
+  //删除按钮 滑动判断
   drawMove: function(e) {
     var touch = e.touches[0]
     var item = this.data.shopList[e.currentTarget.dataset.index]
@@ -112,6 +114,73 @@ Page({
       this.setData({
         isScroll: true,
         shopList: this.data.shopList,
+      })
+    }
+  },
+  //删除购物车商品方法
+  delItem: function(e) {
+
+  },
+  toDetail:function(e){
+    wx.navigateTo({
+      url: '../details/details',
+    })
+  },
+  //计算按钮
+  toPay: function(e){
+    let PriceAll = this.data.priceAll;
+    let Sale = this.data.sale;
+    let Freight = this.data.freight;
+    let Pack = this.data.pack;
+    let pay = PriceAll - Sale + Freight + Pack;
+    console.log(PriceAll - Sale + Freight + Pack);
+    if(pay == 0){
+      wx.showToast({
+        title: '您还未选择商品',
+        icon: "none"
+      })
+    }else{
+      wx.navigateTo({
+        url: '../pay/pay',
+      })
+    }
+  },
+
+  //减少数量
+  subtract: function(e){
+    let subNum = e.currentTarget.dataset.num;
+    let subIndex = e.currentTarget.dataset.index;
+    let target = 'shopList['+ subIndex +'].num';
+    var that = this;
+    if(subNum == 1){
+      wx.showToast({
+        title: '亲，至少买一个吧',
+        icon: 'none'
+      })
+    }else{
+      let jian = --subNum;
+      console.log(jian);
+      that.setData({
+        [target]: jian
+      })
+    }
+  },
+
+  //增加数量
+  plus: function(e){
+    let plusNum = e.currentTarget.dataset.num;
+    let plusIndex = e.currentTarget.dataset.index;
+    let target = 'shopList['+ plusIndex +'].num';
+    var that = this;
+    if (plusNum < 9){
+      let jia = ++plusNum;
+      that.setData({
+        [target]: jia
+      })
+    }else{
+      wx.showToast({
+        title: '亲，不要太贪心哦',
+        icon: 'none'
       })
     }
   },

@@ -16,7 +16,7 @@
   <!--banner end-->
   <view class='series-content'>
     <block wx:for='{{series}}' wx:key='id'>
-      <view class='series-item' data-page='{{item.linkUrl}}'>
+      <view class='series-item' data-page='{{item.linkUrl}}' bindtap='toList'>
         <image mode='widthFix' src='{{item.picUrl}}'></image>
         <view class='series-name'>{{item.txt}}</view>
         <view class='series-go'>即刻选购></view>
@@ -27,7 +27,7 @@
   <view class='pro-index'>
     <block wx:for='{{proList}}' wx:key='id' wx:for-item='pro'>
       <view class='pro-list'>
-        <image mode='widthFix' src='{{pro.picUrl[pro.num]}}'></image>
+        <image mode='widthFix' src='{{pro.picUrl[pro.num]}}' bindtap='toDetail'></image>
         <view class='pro-name'>{{pro.name}}</view>
         <view class='pro-price'>{{pro.price}}</view>
         <view class='pro-classify'>

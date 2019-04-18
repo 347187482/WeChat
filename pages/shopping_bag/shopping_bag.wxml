@@ -14,7 +14,7 @@
                   </label>
                 </view>
                 <view class='shop-bag-list-item-img'>
-                  <image mode='widthFix' src='{{item.imgUrl}}'></image>
+                  <image mode='widthFix' src='{{item.imgUrl}}' bindtap='toDetail'></image>
                 </view>
                 <view class='shop-bag-list-item-txt'>
                   <view class='shop-bag-list-item-txt-name'>{{item.name}}</view>
@@ -22,16 +22,16 @@
                   <view class='shop-bag-list-item-txt-color'>颜色：{{item.color.colorNow}}</view>
                   <view class='shop-bag-list-item-price'>
                     <view class='shop-bag-list-item-num'>
-                      <view class='shop-bag-list-item-num-subtract'>-</view>
+                      <view class='shop-bag-list-item-num-subtract' bindtap='subtract' data-index='{{index}}' data-num='{{item.num}}'>-</view>
                       <view class='shop-bag-list-item-num-input'>
                         <input type='text' value='{{item.num}}' />
                       </view>
-                      <view class='shop-bag-list-item-num-add'>+</view>
+                      <view class='shop-bag-list-item-num-add' bindtap='plus' data-index='{{index}}' data-num='{{item.num}}'>+</view>
                     </view>
                     <view class='shop-bag-list-item-price-txt'>￥{{item.price}}</view>
                   </view>
                 </view>
-                <view class="shop-bag-list-item-remove" bindtap="delItem">删除 </view>
+                <view class="shop-bag-list-item-remove" bindtap='delItem'>删除 </view>
               </view>
               <!--<view class='shop-bag-list-item-change'>
                 <view class='shop-bag-list-item-change-span'></view>
@@ -75,7 +75,7 @@
     <view class='account-price-aggregate'>
       总计：￥{{priceAll - sale + freight + pack}}.00
     </view>
-    <view class='account-price-btn'>
+    <view class='account-price-btn' bindtap='toPay'>
       结算
     </view>
   </view>

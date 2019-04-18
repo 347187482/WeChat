@@ -8,7 +8,10 @@
         <view>授权地址信息</view>
       </view>
       <view class='pay-address-add'>
-        <view class='pay-address-add-btn'>+添加新地址</view>
+        <picker mode='region' bindchange="bindRegionChange">
+          <view class='pay-address-add-btn'>+添加新地址</view>
+        </picker>
+        <view wx:if='{{region.length != 0}}' class='pay-address-txt'>地址: {{region[0]}} {{region[1]}} {{region[2]}}</view>
       </view>
     </view>
   </view>
@@ -40,10 +43,28 @@
   <view class='pay-pro-content'>
     <view class='pay-pro'>
       <view class='pay-pro-txt'>商品详情</view>
+      <view class='pay-pro-list'>
+        <block wx:for='{{payList}}' wx:key=''>
+          <view class='pay-pro-item'>
+            <view class='pay-pro-item-left'>
+              <image mode='widthFix' src='{{item.picUrl}}'></image>
+            </view>
+            <view class='pay-pro-item-right'>
+              <view class='pay-pro-item-name'>{{item.name}}</view>
+              <view class='pay-pro-item-size'>尺码:{{item.size}}</view>
+              <view class='pay-pro-item-color'>颜色:{{item.color}}</view>
+              <view class='pay-pro-item-txt'>
+                <view class='pay-pro-item-num'>数量:{{item.num}}</view>
+                <view class='pay-pro-item-price'>￥{{item.price}}.00</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
     </view>
   </view>
   <!--支付按钮-->
   <view class='pay-btn'>
-    支付金额￥11，000
+    支付金额￥{{priceAll}}.00
   </view>
 </view>

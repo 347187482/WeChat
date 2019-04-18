@@ -119,6 +119,16 @@ Page({
       [newNum]: dataNum
     })
   },
+  toDetail: function(e){
+    wx.navigateTo({
+      url: '../details/details',
+    })
+  },
+  toList:function(e){
+    wx.navigateTo({
+      url: '../list/list',
+    })
+  },
   //事件处理函数
   /*bindViewTap: function() {
     wx.navigateTo({

@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/shopping_bag/shopping_bag",
+    "pages/index/index",
     "pages/pay/pay",
     "pages/classify/classify",
     "pages/details/details",
     "pages/list/list",
     "pages/my/my",
-    "pages/shopping_bag/shopping_bag",
-    "pages/index/index",
     "pages/logs/logs",
     "template/search"
   ],
