@@ -28,52 +28,52 @@ Page({
     proList: [{
         id: 0,
         num: 0,
-        picUrl: ['../../img/list/list01.jpg'],
+        picUrl: ['../../../img/list/list01.jpg'],
         name: 'Trent 高帮涂鸦运动鞋',
         price: '￥5300',
         classify: [{
           id: '0',
-          picUrl: '../../img/list/list01_item_01.jpg'
+          picUrl: '../../../img/list/list01_item_01.jpg'
         }]
       },
       {
         id: 1,
         num: 0,
-        picUrl: ['../../img/list/list02.jpg'],
+        picUrl: ['../../../img/list/list02.jpg'],
         name: 'Georgie 拼色系带运动鞋',
         price: '￥5300',
         classify: [{
           id: '0',
-          picUrl: '../../img/list/list02_item_01.jpg'
+          picUrl: '../../../img/list/list02_item_01.jpg'
         }]
       },
       {
         id: 2,
         num: 0,
-        picUrl: ['../../img/list/list03_01.jpg', '../../img/list/list03_02.jpg'],
+        picUrl: ['../../../img/list/list03_01.jpg', '../../../img/list/list03_02.jpg'],
         name: 'Lillie 皮质平底鞋',
         price: '￥4600',
         classify: [{
           id: '0',
-          picUrl: '../../img/list/list03_item_01.jpg'
+          picUrl: '../../../img/list/list03_item_01.jpg'
         }, {
           id: '0',
-          picUrl: '../../img/list/list03_item_02.jpg'
+          picUrl: '../../../img/list/list03_item_02.jpg'
         }]
       },
       {
         id: 3,
         num: 0,
-        picUrl: ['../../img/list/list04_01.jpg', '../../img/list/list04_02.jpg'],
+        picUrl: ['../../../img/list/list04_01.jpg', '../../../img/list/list04_02.jpg'],
         name: 'Ellen 皮质铆钉装饰凉鞋',
         price: '￥3400',
         classify: [{
             id: '0',
-            picUrl: '../../img/list/list04_item_01.jpg'
+            picUrl: '../../../img/list/list04_item_01.jpg'
           },
           {
             id: '1',
-            picUrl: '../../img/list/list04_item_02.jpg'
+            picUrl: '../../../img/list/list04_item_02.jpg'
           }
         ]
       }
@@ -109,7 +109,7 @@ Page({
   },
   toDetails:function(e){
     wx.navigateTo({
-      url: '../details/details',
+      url: '../../../pages/details/details',
     })
   },
   /**

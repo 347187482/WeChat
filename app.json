@@ -5,7 +5,6 @@
     "pages/pay/pay",
     "pages/classify/classify",
     "pages/details/details",
-    "pages/list/list",
     "pages/my/my",
     "pages/logs/logs",
     "template/search"
@@ -17,6 +16,14 @@
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },
+  "subpackages": [
+    {
+      "root":"topay",
+      "pages": [
+        "pages/list/list"
+      ]
+    }
+  ],
   "tabBar": {
     "color": "#3c3c3c",
     "selectedColor": "#000000",

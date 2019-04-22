@@ -165,10 +165,9 @@ Page({
     })
   },
   classifyList: function (e) {
-    console.log(e);
     let category = e.currentTarget.dataset.category;
     wx.navigateTo({
-      url: '../list/list?category=' + category
+      url: '../../topay/pages/list/list?category=' + category
     })
   },
   /**

@@ -1,4 +1,4 @@
-<import src='../../template/search.wxml' />
+<import src='../../../template/search.wxml' />
 <!--pages/list/list.wxml-->
 <view class='container'>
   <template is='search' data='{{...item}}'></template>
