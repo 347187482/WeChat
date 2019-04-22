@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/shopping_bag/shopping_bag",
     "pages/index/index",
+    "pages/shopping_bag/shopping_bag",
     "pages/pay/pay",
     "pages/classify/classify",
     "pages/details/details",

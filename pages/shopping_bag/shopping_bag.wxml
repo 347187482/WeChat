@@ -10,7 +10,7 @@
               <view data-index='{{index}}' class='shop-bag-list-item' bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
                 <view class='shop-bag-list-item-chackbox'>
                   <label>
-                    <checkbox data-index='{{index}}' value='{{item.id}}'></checkbox>
+                    <checkbox data-index='{{index}}' value='{{item.id}}' bindtap='checked' checked='{{item.checked}}'></checkbox>
                   </label>
                 </view>
                 <view class='shop-bag-list-item-img'>
@@ -69,7 +69,7 @@
   <view class='account-price-content'>
     <view class='account-price-chackbox'>
       <label>
-        <checkbox></checkbox>全选
+        <checkbox bindtap='allCheck' checked='{{allCheck}}'></checkbox>全选
       </label>
     </view>
     <view class='account-price-aggregate'>
