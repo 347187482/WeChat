@@ -129,6 +129,7 @@ Page({
       url: '../list/list',
     })
   },
+
   //事件处理函数
   /*bindViewTap: function() {
     wx.navigateTo({
@@ -136,6 +137,13 @@ Page({
     })
   },*/
   onLoad: function() {
+    wx.showLoading({
+      title: '加载中'
+    });
+
+    setTimeout(() => {
+      wx.hideLoading();
+    },2000);
     /*if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

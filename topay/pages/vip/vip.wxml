@@ -1,0 +1,4 @@
+<!--topay/pages/vip/vip.wxml-->
+<view class='container'>
+  <view class='vip-content'></view>
+</view>

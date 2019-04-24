@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/index/index",
     "pages/shopping_bag/shopping_bag",
     "pages/pay/pay",
     "pages/classify/classify",
     "pages/details/details",
-    "pages/my/my",
     "pages/logs/logs",
     "template/search"
   ],
@@ -18,9 +18,9 @@
   },
   "subpackages": [
     {
-      "root":"topay",
+      "root": "topay",
       "pages": [
-        "pages/list/list"
+        "pages/list/list","pages/vip/vip"
       ]
     }
   ],
