@@ -1,0 +1,27 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <view class='vip-nav'>MICHAEL KORS</view>
+  <view class='order-content'>
+    <view class='order-nav'>
+      <block wx:for="{{nav}}" wx:key="">
+        <view class='order-nav-list {{num == index ? "active" : ""}}' bindtap='changeNav' data-id="{{item.id}}">{{item.title}}</view>
+      </block>
+    </view>
+    <view class='order-list'>
+      <view wx:if='{{nav[num].list.length==0}}' class='order-none'>您暂无消费记录</view>
+      <block wx:else>
+        <blcok wx:for='{{nav[num].list}}' wx:key="list.id" wx:for-item="list">
+          <view class='order-lidt-item' bindtap='toDetail'>
+            <view class='order-lidt-item-img'>
+              <image mode='widthFix' src='{{list.imgUrl}}'></image>
+            </view>
+            <view class='order-lidt-item-txt'>
+              <view class='order-lidt-item-name'>{{list.name}}</view>
+              <view class='order-lidt-item-price'>￥{{list.price}}</view>
+            </view>
+          </view>
+        </blcok>
+      </block>
+    </view>
+  </view>
+</view>

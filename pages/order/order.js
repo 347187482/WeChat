@@ -1,38 +1,36 @@
-// pages/my/my.js
+// pages/order/order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    myList: [{
-      name: "购物记录",
-      imgUrl: "../../img/icon/my01.png"
+    num:0,
+    nav: [{
+      id: '0',
+      title: '门店消费',
+      list:[{
+        id:'0',
+        name: "Abbott 牛仔厚底凉鞋",
+        price: "1900.00",
+        imgUrl: "../../img/shop_bag/shop_bag02.jpg"
+      }]
     }, {
-      name: "我的地址",
-      imgUrl: "../../img/icon/my02.png"
-    }, {
-      name: "我的信息",
-      imgUrl: "../../img/icon/my03.png"
-    }, {
-      name: "会员中心",
-      imgUrl: "../../img/icon/my04.png"
-    }, {
-      name: "精品店指南",
-      imgUrl: "../../img/icon/my05.png"
-    }, {
-      name: "联系我们",
-      imgUrl: "../../img/icon/my06.png"
+      id: '1',
+      title: '线上消费',
+      list:[]
     }]
   },
-  toVip: function(e){
-    wx.navigateTo({
-      url: '../../topay/pages/vip/vip'
-    })
+  changeNav: function(e){
+    let newNum = e.currentTarget.dataset.id;
+    var that = this;
+    that.setData({
+      num: newNum
+    });
   },
-  toOrder: function(e){
+  toDetail: function(e){
     wx.navigateTo({
-      url: '../order/order',
+      url: '../details/details',
     })
   },
   /**
@@ -46,7 +44,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    
+
   },
 
   /**

@@ -1,12 +1,32 @@
 <!--pages/my/my.wxml-->
 <view class='container'>
   <view class='my-content'>
-    <block wx:for='{{myList}}' wx:key=''>
-      <view class='my-item'>
-        <image src='{{item.imgUrl}}'></image>
-        <text>{{item.name}}</text>
+    <!-- <block wx:for='{{myList}}' wx:key=''> -->
+      <view class='my-item' bindtap='toOrder'>
+        <image src='../../img/icon/my01.png'></image>
+        <text>购物记录</text>
       </view>
-    </block>
+      <view class='my-item'>
+        <image src='../../img/icon/my02.png'></image>
+        <text>我的地址</text>
+      </view>
+      <view class='my-item'>
+        <image src='../../img/icon/my03.png'></image>
+        <text>我的信息</text>
+      </view>
+      <view class='my-item' bindtap='toVip'>
+        <image src='../../img/icon/my04.png'></image>
+        <text>会员中心</text>
+      </view>
+      <view class='my-item'>
+        <image src='../../img/icon/my05.png'></image>
+        <text>精品店指南</text>
+      </view>
+      <view class='my-item'>
+        <image src='../../img/icon/my06.png'></image>
+        <text>联系我们</text>
+      </view>
+    <!-- </block> -->
   </view>
   <view class='my-issue-box'>
     <view class='my-issue'>

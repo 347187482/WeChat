@@ -1,4 +1,27 @@
 <!--topay/pages/vip/vip.wxml-->
 <view class='container'>
-  <view class='vip-content'></view>
+  <view class='vip-nav'>MICHAEL KORS</view>
+  <view class='vip-content'>
+    <view class='vip-user'>
+      <view class='vip-name'>名字</view>
+      <view class='vip-message'>
+        <view>您当前没有任何消费及积分</view>
+        <view>任意消费即可升级为KORS普通会员</view>
+        <view class='vip-regist'>
+          <view class='vip-top'>
+            <view class='vip-left'>KORS会员注册</view>
+            <view class='vip-right'>KORS普通会员</view>
+          </view>
+          <view class='vip-cut'></view>
+          <view class='vip-bottom'>
+            <view class='vip-left'>0</view>
+            <view class='vip-right'>任意消费</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='vip-gift'>
+      <view class='vip-gift-list'>用户礼券信息</view>
+    </view>
+  </view>
 </view>

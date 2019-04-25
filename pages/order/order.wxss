@@ -1,0 +1,85 @@
+/* pages/order/order.wxss */
+@import "../index/index.wxss";
+
+.vip-nav{
+  position: relative;
+  padding: 32rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #979797;
+  margin-bottom: 16rpx;
+}
+
+.order-content{
+  position: relative;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.order-nav{
+  position: relative;
+}
+
+.order-nav:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.order-nav-list{
+  position: relative;
+  float: left;
+  padding: 20rpx 0;
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+
+.order-nav-list.active{
+  border-bottom: 2rpx solid #979797;
+}
+
+.order-list{
+  position: relative;
+}
+
+.order-none{
+  position: relative;
+  padding: 32rpx 0;
+  text-align: center;
+}
+
+.order-lidt-item{
+  position: relative;
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid #979797;
+}
+
+.order-lidt-item::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.order-lidt-item-img,.order-lidt-item-txt{
+  position: relative;
+  float: left;
+  width: 35%;
+  margin-right: 5%; 
+}
+
+.order-lidt-item-txt{
+  width: 60%;
+  margin: 0;
+}
+
+.order-lidt-item-img image{
+  width: 100%;
+  display: block;
+}
+
+.order-lidt-item-name,.order-lidt-item-price{
+  position: relative;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+}

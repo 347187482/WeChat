@@ -1,1 +1,77 @@
 /* topay/pages/vip/vip.wxss */
+.vip-content{
+  position: relative;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.vip-nav{
+  position: relative;
+  padding: 32rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #979797;
+  margin-bottom: 16rpx;
+}
+
+.vip-user{
+  position: relative;
+  margin-bottom: 80rpx;
+}
+
+.vip-name{
+  position: relative;
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid #979797;
+}
+
+.vip-message{
+  position: relative;
+  padding-top: 40rpx;
+  font-size: 24rpx;
+  color: #979797;
+}
+
+.vip-message>view{
+  text-align: center;
+}
+
+.vip-regist{
+  position: relative;
+  margin-top: 80rpx;
+  color: #979797;
+}
+
+.vip-regist::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.vip-top::after,vip-bottom::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.vip-left{
+  position: relative;
+  float: left;
+}
+
+.vip-right{
+  position: relative;
+  float: right;
+}
+
+.vip-cut{
+  position: relative;
+  margin: 12rpx 0;
+  height: 6rpx;
+  border: 2rpx solid #979797;
+}
+/* 用户信息展示 */
+
+.vip-gift{
+  position: relative;
+  text-align: center;
+}
