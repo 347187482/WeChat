@@ -78,14 +78,14 @@
 
 .size-list {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 80rpx;
+  height: 80rpx;
   margin-right: 6rpx;
   float: left;
   box-sizing: border-box;
   color: #000;
   text-align: center;
-  line-height: 38px;
+  line-height: 76rpx;
   border: 2rpx solid #000;
 }
 

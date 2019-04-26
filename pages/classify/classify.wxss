@@ -51,6 +51,11 @@
   left: -6%;
 }
 
+.classify-left-bg{
+  position: relative;
+  height: 100vh;
+}
+
 .classify-list{
   position: relative;
   padding: 10px 0;

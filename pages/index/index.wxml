@@ -41,3 +41,5 @@
     </block>
   </view>
 </view>
+
+<button open-type='getUserInfo' bindgetuserinfo="userInfoHandler">获取</button>

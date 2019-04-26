@@ -21,7 +21,9 @@
     {
       "root": "topay",
       "pages": [
-        "pages/list/list","pages/vip/vip"
+        "pages/list/list",
+        "pages/vip/vip",
+        "pages/list_2/list-2"
       ]
     }
   ],

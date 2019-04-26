@@ -112,6 +112,11 @@ Page({
       url: '../../../pages/details/details',
     })
   },
+  toList:function(e){
+    wx.navigateTo({
+      url: '../list_2/list-2',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

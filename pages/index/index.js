@@ -126,7 +126,7 @@ Page({
   },
   toList:function(e){
     wx.navigateTo({
-      url: '../list/list',
+      url: '../../topay/pages/list/list',
     })
   },
 
@@ -144,6 +144,14 @@ Page({
     setTimeout(() => {
       wx.hideLoading();
     },2000);
+
+    console.log(app.globalData);
+
+    wx.getUserInfo({
+      success(res) {
+        console.log(res);
+      }
+    });
     /*if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

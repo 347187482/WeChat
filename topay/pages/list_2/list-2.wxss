@@ -1,0 +1,80 @@
+/* pages/list/list.wxss */
+@import "../../../template/search.wxss";
+@import "../../../pages/index/index.wxss";
+
+.list-content{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.list-title{
+  position: relative;
+  padding: 20px 0;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.list-link{
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2rpx solid #bebebe;
+}
+
+.list-link:after{
+  content:"";
+  display: block;
+  clear: both;
+}
+
+.list-link .list-link-item:first-child{
+  margin-left: 0;
+}
+
+.list-link-item{
+  position: relative;
+  width: calc(94%/4);
+  float: left;
+  margin-left: 2%;
+  font-size: 24rpx;
+  text-align: center;
+  border: 2rpx solid #bebebe;
+  border-radius: 18rpx;
+  box-sizing: border-box;
+}
+
+.list-choose{
+  position: relative;
+  text-align: center;
+  font-size: 28rpx;
+  color: #cfcfcf;
+  margin-bottom: 20px;
+}
+
+.list-choose:after{
+  content:"";
+  display: block;
+  clear: both;
+}
+
+.list-choose .list-choose-item:first-child{
+  border: none;
+}
+
+.list-choose-item{
+  position: relative;
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+  border-left: 2rpx solid #000;
+}
+
+.list-choose-item.active{
+  color: #000;
+  font-weight: bold;
+}
+
+.pro-index{
+  width: 100%;
+}
